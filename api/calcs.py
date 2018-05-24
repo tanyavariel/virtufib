@@ -1,5 +1,5 @@
 from flask import make_response
-JSON_MIME_TYPE = application/json
+JSON_MIME_TYPE = 'application/json'
 def genfbseq(seqnum):
     ra = 0
     rb = 1
@@ -18,7 +18,7 @@ def genfbseq(seqnum):
         seqnum -= 1
         
     return fibs
-def json_response(data=, status=200, headers=None):
+def json_response(data='', status=200, headers=None):
     headers = headers or {}
     if Content-Type not in headers:
         headers[Content-Type] = JSON_MIME_TYPE
